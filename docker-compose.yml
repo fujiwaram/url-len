@@ -1,0 +1,11 @@
+version: '3'
+ 
+services:
+  nginx:
+    build: ./
+    image: urllen
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/nginx.conf
